@@ -20,6 +20,7 @@
 	ESX_MENU.pos = {};
 
 	ESX_MENU.open = function(namespace, name, data) {
+
 		if (typeof ESX_MENU.opened[namespace] == 'undefined') {
 			ESX_MENU.opened[namespace] = {};
 		}

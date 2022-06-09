@@ -1,100 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Signika+Negative:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+::-webkit-scrollbar {
+	display: none;
+}
+
 .menu {
-	text-transform: uppercase;
-	font-family: 'Yantramanav', sans-serif;
-	font-size: 18px;
-	font-weight: 900;
-	text-shadow: 1px 2px 3px rgb(46, 46, 46);
-	border-radius: 10px;
-	min-width: 14%;
-	color: #fff;
-	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0);
-	position: fixed;
-	margin-bottom: 5%;
+	font-family: 'Rubik', sans-serif;
+	min-width: 350px;
+	position: absolute;
+	padding: 0.6vh;
+	background: #1f2830;
+	text-align: center;
+	border-bottom: 2px solid #485b6d;
+	border-radius: .5vh
+	
 }
 
-.menu.align-left {
-	left: 40;
-	top: 33%;
-	transform: translate(0, -50%);
-}
-
-.menu.align-top-left {
-	left: 40;
-	top: 40;
-}
-
-.menu.align-top {
-	left: 50%;
-	top: 20;
-	transform: translate(-50%, 0);
-}
-
-.menu.align-top-right {
-	right: 10;
-	top: 40;
-}
-
-.menu.align-right {
-	right: 40;
-	top: 40%;
-	transform: translate(0, -50%);
-}
-
-.menu.align-bottom-right {
-	right: 40;
-	bottom: 40;
-}
-
-.menu.align-bottom {
-	left: 50%;
-	bottom: 40;
-	transform: translate(-50%, 0);
-}
-
-.menu.align-bottom-left {
-	left: 40;
-	bottom: 40;
-}
-
-
-.menu.align-center {
-	right: 50;
-	top: 50%;
-	transform: translate(0, -50%);
+.head {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	padding-bottom: 3px;
+	text-align: center;
+	margin-bottom: 5px;
+	white-space: nowrap;
+	background: #303c47;
+	border-radius: .5vh;
 }
 
 .menu .head {
-	background-color: #252525;
 	text-align: center;
-	line-height: 40px;
-	margin-top:100px;
-	border-radius: 5px;
-	border: 2px solid #4b4b4b;
-
+	height: 28px;
+	color: #ead29f;
+	font-weight: 600;
+	font-size: 20px;
 }
 
 .menu .menu-items {
-	margin-top: 3%;
-	max-height: 600px;
+	max-height: 450px;
 	overflow-y: auto;
-	font-weight: 600;
-	border-radius: 3px;
-	border: 2px solid #4b4b4b;
+	font-weight: 550;
+}
+
+.menu-items {
+	margin-bottom: 2px;
 }
 
 .menu .menu-items .menu-item {
 	display: block;
-	background-color: #252525;;
-	line-height: 32px;
-	color: #ffffff;
-	padding: 4px;
-	text-align: center;
+	padding: 7px;
+	font-size: 13px;
+	height: 16px;
+	text-indent: 5px;
+	margin-top: 5px;
+	background: #303c47;
+	color: rgb(202, 202, 202);
+	border-radius: .3vh;
+	margin-bottom: 6px;
+	transition-duration: 2.4s;
+	font-weight: 450;
 }
+
+/** To change animation change the name in animation **/
+
+/** Animation list: popout, pulse **/
 
 .menu .menu-items .menu-item.selected {
-	background-color: rgb(53, 53, 53);
-
+	background: #445564;
+	border-bottom: 2px solid #ead29f;
+	color: rgb(255, 255, 255);
+	letter-spacing: 0.2px;
+	font-weight: 500;
+	animation: popout 800ms;
 }
+
+
+.menu.align-left {
+	left: 40;
+	top: 50%;
+}
+
+.menu.align-top-left {
+	left: 40;
+	top: 30;
+}
+
+.menu.align-top {
+	left: 40%;
+	top: 30;
+}
+
+.menu.align-top-right {
+	right: 40;
+	top: 30;
+}
+
+.menu.align-right {
+	right: 40;
+	top: 50%;
+}
+
+.menu.align-bottom-right {
+	right: 40;
+	bottom: 30;
+}
+
+.menu.align-bottom {
+	left: 40%;
+	bottom: 0;
+	transform: translate(0, -50%);
+}
+
+.menu.align-bottom-left {
+	left: 40;
+	bottom: 30;
+}
+
+.menu.align-center {
+  	left: 40%;
+	top: 50%;
+}
+
+/** ANIMATIONS  **/
+
+@keyframes popout {
+	0% {transform: scale(1.0);} 20% {transform: scale(1.1);} 100% {transform: scale(1.0);}}
+
+@keyframes pulse {
+	0% {opacity: 1;} 20% {opacity: 0.5;} 100% {opacity: 1;}}	
